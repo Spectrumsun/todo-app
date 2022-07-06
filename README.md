@@ -12,8 +12,8 @@ A simple todo application
 # Technologies Used
    * HTML,SCSS,React,Typescript
 # Features
-   * A user can a new todo
-   * A user view list of todos
+   * A user can add a new todo
+   * A user can view the list of todos
    * A user delete a todo
 # To Install
 * Download or clone the repo
