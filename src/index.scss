@@ -1,0 +1,131 @@
+:root {
+  --transparent: rgba(247, 247, 247, 0.95);
+  --darkBlack: #636363;
+  --gray: #dddddd;
+  --lightGray: rgba(255, 255, 255, 0.65);
+  --lightWhite: rgba(0, 0, 0, 0.25);
+  --mainColor: #1b1b25;
+  --border: #e8491d;
+  --white: #ffffff;
+  --black: black;
+  --background: #F1F4FC;
+  --success: #111312;
+  --darkRed: #8b0000;
+  --red: #FF4949;
+  --purple: #541690;
+  --orange: #FF8D29;
+  --yellow: #FFCD38;
+  --trans: rgba(255, 255, 255, 0.11);
+  --trans2: rgba(255, 255, 255, 0.09);
+  --newBorder: #ddd;
+  --modal: rgba(0,0,0,0.4);
+  --container: #fefefe;
+}
+
+body {
+  background: var(--background);
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 17pt;
+  font-weight: 300;
+  line-height: 1.65;
+  color: white;
+  margin-top: -5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--modal);
+  
+  &__content {
+    background-color: var(--container);
+    margin: auto;
+    padding: 20px;
+    width: 30%;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__close {
+    color: var(--gray);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    &:hover, focus {
+      color: var(--black);
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 990px) {
+    &__content{
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 645px) {
+    &__content{
+      width: 90%;
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  color: var(--black);
+  border: 1px solid var(--black);
+  transition: color .5s, box-shadow .5s;
+
+  &:hover {
+    box-shadow: 0 0 5px var(--white);
+    background-color: var(--black);
+    color:  var(--white);
+    font-weight: bolder;
+  }
+}
+
+input {
+  width: 95%;
+  height: 40px;
+  margin-bottom: 22px;
+  outline: none;
+  border: 1px solid var(--newBorder);
+  padding: 10px;
+  background: var(--background);
+}
